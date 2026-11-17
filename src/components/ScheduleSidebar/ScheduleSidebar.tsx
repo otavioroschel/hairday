@@ -46,9 +46,9 @@ export function ScheduleSidebar({ appointments, onSubmit }: ScheduleSidebarProps
   }
 
   return (
-    <aside className="flex w-full flex-col lg:m-3 lg:w-[498px] lg:shrink-0">
-      {/* Logo em card sobreposto ao painel: tom mais claro (gray-600) e canto inferior direito arredondado */}
-      <div className="relative z-10 -mb-4 inline-flex items-center self-start gap-1 rounded-br-xl bg-gray-600 px-4 py-2 text-yellow lg:-ml-3">
+    <aside className="m-3 flex w-auto flex-col lg:w-[498px] lg:shrink-0">
+      {/* Logo em card sobreposto ao painel */}
+      <div className="relative z-10 -mb-4 -ml-3 inline-flex items-center self-start gap-1 rounded-br-xl bg-gray-600 px-4 py-2 text-yellow">
         <span className="text-xl">HairDay</span>
         <Scissors size={20} className="text-yellow" aria-hidden="true" />
       </div>
