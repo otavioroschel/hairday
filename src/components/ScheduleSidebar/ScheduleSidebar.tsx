@@ -46,14 +46,16 @@ export function ScheduleSidebar({ appointments, onSubmit }: ScheduleSidebarProps
   }
 
   return (
-    <aside className="flex w-full flex-col rounded-2xl bg-panel p-6 lg:m-3 lg:w-[498px] lg:shrink-0">
-      <div className="lg:px-[56px] lg:pb-[44px]">
-        <div className="flex items-center gap-1 text-gray-100">
-          <span className="text-xl font-bold">HairDay</span>
-          <Scissors size={20} weight="bold" className="text-yellow" aria-hidden="true" />
-        </div>
+    <aside className="flex w-full flex-col lg:m-3 lg:w-[498px] lg:shrink-0">
+      {/* Logo em card-abas: fundo igual ao painel, canto inferior direito arredondado */}
+      <div className="inline-flex items-center self-start gap-1 rounded-br-xl bg-panel px-4 py-2 text-yellow">
+        <span className="text-xl">HairDay</span>
+        <Scissors size={20} className="text-yellow" aria-hidden="true" />
+      </div>
 
-        <h1 className="mt-3 text-xl leading-8 font-bold text-gray-100">
+      <div className="flex flex-col rounded-2xl rounded-tl-none bg-panel p-6">
+        <div className="lg:px-[56px] lg:pb-[44px]">
+        <h1 className="mt-8 text-xl leading-8 font-bold text-gray-100 lg:mt-11">
           Agende um atendimento
         </h1>
         <p className="mt-1 max-w-[338px] text-sm leading-5 text-gray-300">
@@ -144,6 +146,7 @@ export function ScheduleSidebar({ appointments, onSubmit }: ScheduleSidebarProps
           Agendar
         </button>
         </form>
+        </div>
       </div>
     </aside>
   );
