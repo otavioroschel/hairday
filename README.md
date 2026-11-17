@@ -32,8 +32,8 @@ Os agendamentos ficam em memória (estado do React), conforme o escopo do projet
 ### Mobile
 
 <p align="center">
-  <img src="docs/screenshot-mobile-1.png" width="49%" alt="Versão mobile do HairDay — formulário de agendamento com o card do logo HairDay" />
-  <img src="docs/screenshot-mobile-2.png" width="49%" alt="Versão mobile do HairDay — formulário de agendamento com a grade de horários" />
+  <img src="src/assets/mobile1.png" width="49%" alt="Versão mobile do HairDay — formulário de agendamento completo (data, horários e cliente)" />
+  <img src="src/assets/mobile2.png" width="49%" alt="Versão mobile do HairDay — botão Agendar e agenda do dia com os períodos" />
 </p>
 
 ## 🚀 Tecnologias
