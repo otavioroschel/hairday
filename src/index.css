@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/*
+  HairDay — Design Tokens (Style Guide do Figma)
+
+  Amarelos do produto e cinzas base transcritos do Style Guide (node 3:377).
+  Os tokens semânticos (page, panel, card, field) centralizam o mapeamento
+  de fundos para evitar hexadecimais espalhados pelos componentes.
+*/
+@theme {
+  /* Produto */
+  --color-yellow-light: #dbc170;
+  --color-yellow: #b8952e;
+  --color-yellow-dark: #846f2e;
+
+  /* Base */
+  --color-gray-100: #f5f4f5;
+  --color-gray-200: #b2afb6;
+  --color-gray-300: #98959d;
+  --color-gray-400: #7a767f;
+  --color-gray-500: #3e3c41;
+  --color-gray-600: #2e2c30;
+  --color-gray-700: #232225;
+  --color-gray-800: #19181b;
+  --color-gray-900: #050505;
+
+  /* Semânticos — fundos e superfícies (mapeamento proposto, sujeito a
+     validação visual contra o Figma) */
+  --color-page: #050505; /* fundo da página */
+  --color-panel: #19181b; /* painel da sidebar */
+  --color-card: #19181b; /* cards de período */
+  --color-field: #232225; /* campos e botões de horário */
+
+  /* Tipografia */
+  --font-sans: "Catamaran", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-page font-sans text-gray-100 antialiased;
+  }
+
+  /* Foco visível para navegação por teclado */
+  :focus-visible {
+    outline: 2px solid var(--color-yellow-light);
+    outline-offset: 2px;
+  }
+}
