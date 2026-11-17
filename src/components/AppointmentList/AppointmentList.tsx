@@ -16,7 +16,7 @@ export function AppointmentList({ appointments, onRemove }: AppointmentListProps
   const grouped = groupAppointmentsByPeriod(appointments, agendaDate);
 
   return (
-    <section className="flex w-full flex-col lg:px-28 lg:py-20">
+    <section className="flex w-full flex-col px-6 py-8 lg:px-28 lg:py-20">
       <header className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h2 className="text-xl leading-8 font-bold text-gray-100">Sua agenda</h2>
