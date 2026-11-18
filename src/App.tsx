@@ -19,7 +19,7 @@ function App() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col lg:flex-row lg:items-start">
+    <main className="flex min-h-dvh flex-col bg-container lg:flex-row">
       <ScheduleSidebar appointments={appointments} onSubmit={addAppointment} />
       <div className="min-w-0 flex-1">
         <AppointmentList appointments={appointments} onRemove={removeAppointment} />

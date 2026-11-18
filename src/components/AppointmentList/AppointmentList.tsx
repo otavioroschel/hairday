@@ -16,31 +16,33 @@ export function AppointmentList({ appointments, onRemove }: AppointmentListProps
   const grouped = groupAppointmentsByPeriod(appointments, agendaDate);
 
   return (
-    <section className="flex w-full flex-col px-6 py-8 lg:px-28 lg:py-20">
-      <header className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <h2 className="text-xl leading-8 font-bold text-gray-100">Sua agenda</h2>
-          <p className="mt-1 text-sm leading-5 text-gray-300">
-            Consulte os seus cortes de cabelo agendados por dia
-          </p>
-        </div>
-        <DataInput
-          id="agenda-date"
-          value={agendaDate}
-          onChange={setAgendaDate}
-          compact
-        />
-      </header>
-
-      <div className="mt-8 flex flex-col gap-3 lg:max-w-[682px]">
-        {PERIODS.map((period) => (
-          <PeriodSection
-            key={period.key}
-            period={period.key}
-            appointments={grouped[period.key]}
-            onRemove={onRemove}
+    <section className="flex w-full flex-col px-6 py-8 lg:px-12 lg:py-20">
+      <div className="mx-auto flex w-full max-w-[682px] flex-col">
+        <header className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h2 className="text-xl leading-8 font-bold text-gray-100">Sua agenda</h2>
+            <p className="mt-1 text-sm leading-5 text-gray-300">
+              Consulte os seus cortes de cabelo agendados por dia
+            </p>
+          </div>
+          <DataInput
+            id="agenda-date"
+            value={agendaDate}
+            onChange={setAgendaDate}
+            compact
           />
-        ))}
+        </header>
+
+        <div className="mt-8 flex flex-col gap-3">
+          {PERIODS.map((period) => (
+            <PeriodSection
+              key={period.key}
+              period={period.key}
+              appointments={grouped[period.key]}
+              onRemove={onRemove}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
