@@ -27,7 +27,7 @@ Os agendamentos ficam em memória (estado do React), conforme o escopo do projet
 
 ### Desktop
 
-![Versão desktop do HairDay com formulário de agendamento e agenda do dia](docs/screenshot-desktop.png)
+![Versão desktop do HairDay com formulário de agendamento e agenda do dia](src/assets/Desktop.png)
 
 ### Mobile
 
